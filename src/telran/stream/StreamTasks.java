@@ -1,11 +1,10 @@
 package telran.stream;
 
 import java.util.*;
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class StreamTasks {
-	static final int N_GRUP_NUMBERS = 1_000_000;
+	static final int N_GRUP_NUMBERS = 10_000_000;
 	int[] randomNumbers = getRandomNumbers(N_GRUP_NUMBERS);
 	
 	
@@ -17,11 +16,12 @@ public class StreamTasks {
 		
 		System.out.println("Digit Statistics:");
         map.forEach((digit, count) -> System.out.printf("%d: %d%n", digit, count));
+//        Map<Integer, Long> map1 = Arrays.stream(randomNumbers).mapToObj(null)
 		
 	}
 	private int [] getRandomNumbers(int nGroupNumbers) {
 		
-		return new Random().ints(nGroupNumbers, 1, Integer.MAX_VALUE).toArray();
+		return new Random().ints(nGroupNumbers, 0, N_GRUP_NUMBERS).toArray();
 		
 	}
 	
