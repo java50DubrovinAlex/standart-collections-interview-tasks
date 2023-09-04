@@ -33,7 +33,7 @@ LinkedHashMap<String, Integer> map;
 	@Test
 	void getOrderTest() {
 		assertArrayEquals(numbers, map.values().toArray(Integer[]::new));
-		assertEquals(10,map.get("abc")); 
+		assertEquals(10,map.get("abc"));
 		map.put("ttt", 100);
 		Integer[]expected = {13, 20, 10, 100};
 		assertArrayEquals(expected, map.values().toArray(Integer[]::new));
